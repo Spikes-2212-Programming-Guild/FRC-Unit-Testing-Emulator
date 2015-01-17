@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package libraries.joystick;
+package edu.wpi.first.wpilibj.buttons;
 
 import java.util.ArrayList;
 import java.util.Vector;
-import libraries.commandBased.Command;
+import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *

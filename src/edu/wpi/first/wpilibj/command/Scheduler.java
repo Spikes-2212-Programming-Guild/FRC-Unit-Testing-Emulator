@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package libraries.scheduler;
+package edu.wpi.first.wpilibj.command;
 
-import libraries.joystick.Button;
+import edu.wpi.first.wpilibj.buttons.Button;
 
 /**
  *
