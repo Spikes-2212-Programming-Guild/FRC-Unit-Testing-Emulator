@@ -16,7 +16,7 @@ public abstract class Command implements Runnable {
     private ArrayList<Thread> threads = new ArrayList<Thread>();
     private ArrayList<Subsystem> subsystems = new ArrayList<Subsystem>();
     private boolean interrupted;
-    private long timeout;
+    private double timeout;
     private long stopTime;
 
     public Command() {
@@ -35,7 +35,7 @@ public abstract class Command implements Runnable {
 
     public void start() {
         initialize();
-        stopTime = System.currentTimeMillis() + (timeout/1000);
+        stopTime = System.currentTimeMillis() + (int)(timeout*1000);
         for (int i = 0; i < subsystems.size(); i++) {
             threads.add(i, subsystems.get(i).setCommand(this));
         }
@@ -73,7 +73,7 @@ public abstract class Command implements Runnable {
         threads.clear();
     }
     
-    public void setTimeout(long seconds){
+    public void setTimeout(double seconds){
         timeout = seconds;
     }
     
