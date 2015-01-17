@@ -21,7 +21,7 @@ public class CommandGroup extends Command {
 
     public CommandGroup() {
         //intializes the first block
-        commands.add(new ArrayList<>());
+        commands.add(new ArrayList<Command>());
     }
 
     protected void addParallel(Command command) {
@@ -32,7 +32,7 @@ public class CommandGroup extends Command {
     protected void addSequential(Command command) {
         //adds command then makes a new block and moves into using it
         addParallel(command);
-        commands.add(new ArrayList<>());
+        commands.add(new ArrayList<Command>());
         currentCommandBlock++;
     }
 
